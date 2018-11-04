@@ -1,4 +1,3 @@
 # PopularMoviesStage2
-Use in this project Calligraphy by Christopher Jenkins https://github.com/chrisjenx/Calligraphy
-
-Also PhotoView by Chris Banes https://github.com/chrisbanes/PhotoView
+this is the flick pick app which gives you all the information about trending movies, in most popular and latest order.
+to run this app please put your themovieDB api key in Build.gradle file(module app)
