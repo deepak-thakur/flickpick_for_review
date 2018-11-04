@@ -11,7 +11,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center_vertical|start"
         android:padding="6dp"
-        android:textColor="@color/secondary_text"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

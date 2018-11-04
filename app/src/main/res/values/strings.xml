@@ -1,12 +1,14 @@
 <resources>
-    <string name="app_name">Popular Movies</string>
+    <string name="app_name">FlickPick</string>
     <string name="data_not_avaiable_are_you_network_connection">Data not available.\nCheck you network connection.</string>
     <string name="image_poster">Image Poster</string>
 
     <string name="sort">Sort By</string>
+    <string name="bydeepak">By Deepak Thakur</string>
+    <string name="madewith">Made With</string>
     <string name="popularity">Popular</string>
     <string name="splash_1">Popular</string>
-    <string name="splash_2">Movies</string>
+    <string name="splash_2">The Home of Entertainment</string>
     <string name="top_rated">Top rated</string>
     <string name="title">Title:</string>
     <string name="plot_synopsis">Plot Synopsis:</string>
