@@ -16,7 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         buildTypes.each {
-            it.buildConfigField 'String', 'API_KEY', "\"77f3475e9fd251d930a7e5fea0a1d034\""
+            it.buildConfigField 'String', 'API_KEY', "\"\""
         }
     }
     //dataBinding.enabled = true
