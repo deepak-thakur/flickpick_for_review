@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SnapHelper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
 import com.squareup.picasso.Picasso;
 
 import java.net.URL;
@@ -84,8 +86,16 @@ public class DetailActivity extends AppCompatActivity  {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
         ButterKnife.bind(this);
 
-        mRecyclerViewReviews.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        mRecyclerViewTrailers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        // the snap helper is used to scroll the items of recyclerview 1 by 1
+        // you have to add external library to use gravity snaphelper
+        SnapHelper snapHelper = new GravitySnapHelper(Gravity.START);
+        snapHelper.attachToRecyclerView(mRecyclerViewTrailers);
+
+        SnapHelper snapHelper2 = new GravitySnapHelper(Gravity.START);
+        snapHelper2.attachToRecyclerView(mRecyclerViewReviews);
+
+        mRecyclerViewReviews.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        mRecyclerViewTrailers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         mRecyclerViewReviews.setHasFixedSize(true);
         mRecyclerViewTrailers.setHasFixedSize(true);
 
